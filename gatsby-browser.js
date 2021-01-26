@@ -5,13 +5,13 @@
  */
 
 import React from "react"
-import { ChakraProvider, CSSReset } from "@chakra-ui/react"
+import { ChakraProvider, CSSReset, theme } from "@chakra-ui/react"
 // import customTheme from "./src/theme/theme"
 
 export const wrapRootElement = ({ element }) => {
   return (
     // <ChakraProvider theme={customTheme}>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <CSSReset />
       {element}
     </ChakraProvider>
