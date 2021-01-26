@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Daryll Capistrano`,
-    description: `Full Stack Web Developer`,
+    description: `Web Developer`,
     author: `Daryll Capistrano`,
     location: `Las Vegas, NV`,
   },

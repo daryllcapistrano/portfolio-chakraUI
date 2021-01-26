@@ -1,27 +1,8 @@
 import React from "react"
-import PropTypes from "prop-types"
-// import { Link } from "gatsby"
-import { Flex, Box, Spacer } from "@chakra-ui/react"
-import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher"
+import { Flex } from "@chakra-ui/react"
 
-const Header = ({ siteTitle }) => (
-  <Flex pos="fixed" w="100%" p="4" borderTop="6px solid #1F7A8C">
-    {/* <Box alignSelf="center">
-      <Text>{siteTitle}</Text>
-    </Box> */}
-    {/* <Spacer /> */}
-    {/* <Box alignSelf="center">
-      <ColorModeSwitcher />
-    </Box> */}
-  </Flex>
+const Header = () => (
+  <Flex pos="fixed" w="100%" p="4" borderTop="6px solid #1F7A8C"></Flex>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

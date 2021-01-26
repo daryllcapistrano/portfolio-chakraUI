@@ -1,9 +1,24 @@
 import React from "react"
+import PropTypes from "prop-types"
 import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
 import Avatar from "../../assets/avataaars.svg"
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher"
+import { useStaticQuery, graphql } from "gatsby"
 
 function IntroSection() {
+  const data = useStaticQuery(graphql`
+    query SiteMetadataQuery {
+      site {
+        siteMetadata {
+          title
+          description
+          author
+          location
+        }
+      }
+    }
+  `)
+
   const bg = useColorModeValue("white", "gray.800")
 
   return (
@@ -14,9 +29,13 @@ function IntroSection() {
       minH="100vh"
       bg={bg}
     >
-      <Text m="auto" fontSize="xl">
-        Daryll Capistrano Web Developer
-      </Text>
+      <Box m="auto" ml={{ base: `10`, sm: `auto` }}>
+        <Text fontSize="6xl" lineHeight="1">
+          {data.site.siteMetadata.title}
+        </Text>
+        <Text fontSize="xl">{data.site.siteMetadata.description}</Text>
+      </Box>
+
       <Flex flexDirection="column" alignSelf="center">
         <Box alignSelf="center">
           <ColorModeSwitcher />
@@ -27,6 +46,20 @@ function IntroSection() {
       </Flex>
     </Flex>
   )
+}
+
+IntroSection.propTypes = {
+  title: PropTypes.string,
+}
+IntroSection.propTypes = {
+  description: PropTypes.string,
+}
+
+IntroSection.defaultProps = {
+  title: ``,
+}
+IntroSection.defaultProps = {
+  description: ``,
 }
 
 export default IntroSection
