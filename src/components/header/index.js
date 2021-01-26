@@ -5,14 +5,14 @@ import { Flex, Box, Spacer } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher"
 
 const Header = ({ siteTitle }) => (
-  <Flex p="4">
+  <Flex pos="fixed" w="100%" p="4" borderTop="6px solid #1F7A8C">
     {/* <Box alignSelf="center">
       <Text>{siteTitle}</Text>
     </Box> */}
-    <Spacer />
-    <Box alignSelf="center">
+    {/* <Spacer /> */}
+    {/* <Box alignSelf="center">
       <ColorModeSwitcher />
-    </Box>
+    </Box> */}
   </Flex>
 )
 
