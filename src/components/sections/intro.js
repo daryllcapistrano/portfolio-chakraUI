@@ -29,11 +29,14 @@ function IntroSection() {
       minH="100vh"
       bg={bg}
     >
-      <Box m="auto" ml={{ base: `10`, sm: `auto` }}>
-        <Text fontSize="6xl" lineHeight="1">
+      <Box m="auto" pl={{ base: `10`, sm: `0` }}>
+        <Text fontSize="6xl" lineHeight="1.5">
           {data.site.siteMetadata.title}
         </Text>
-        <Text fontSize="xl">{data.site.siteMetadata.description}</Text>
+        <Text fontSize="lg" mt="2">
+          {data.site.siteMetadata.description} in{" "}
+          {data.site.siteMetadata.location}
+        </Text>
       </Box>
 
       <Flex flexDirection="column" alignSelf="center">
