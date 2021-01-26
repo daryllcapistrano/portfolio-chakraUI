@@ -1,15 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import { Box, Text } from "@chakra-ui/react"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+// import Image from "../components/image"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Box w="100%" minH="100vh" bg="blue.800">
+    <Box w="100%" minH="100vh" bg="blue.900">
       <Text fontSize="xl">Section 1</Text>
     </Box>
     <Box w="100%" p={8} bg="blue.500">

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 // import { Link } from "gatsby"
-import { Flex, Box, Spacer, Text } from "@chakra-ui/react"
+import { Flex, Box, Spacer } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher"
 
 const Header = ({ siteTitle }) => (
