@@ -1,18 +1,17 @@
 import React from "react"
 import PropTypes from "prop-types"
 // import { Link } from "gatsby"
-import { Flex, Box, Spacer, Button } from "@chakra-ui/react"
+import { Flex, Box, Spacer, Text } from "@chakra-ui/react"
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher"
 
 const Header = ({ siteTitle }) => (
   <Flex p="4">
-    <ColorModeSwitcher />
+    {/* <Box alignSelf="center">
+      <Text>{siteTitle}</Text>
+    </Box> */}
     <Spacer />
-    <Box>
-      <Button colorScheme="blue" mr="4">
-        dark mode
-      </Button>
-      <Button colorScheme="blue">light mode</Button>
+    <Box alignSelf="center">
+      <ColorModeSwitcher />
     </Box>
   </Flex>
 )
