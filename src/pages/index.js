@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import {
   IntroSection,
   AboutSection,
+  StackSection,
   ProjectSection,
 } from "../components/sections"
 
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <IntroSection />
     <AboutSection />
+    <StackSection />
     <ProjectSection />
     {/* <Box>
       <Image />
