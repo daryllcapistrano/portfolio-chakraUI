@@ -1,13 +1,24 @@
 import React from "react"
-import { Flex, Button, Slide, Box, useDisclosure } from "@chakra-ui/react"
+import {
+  Flex,
+  Button,
+  Slide,
+  Box,
+  useDisclosure,
+  Spacer,
+  Text,
+} from "@chakra-ui/react"
+import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher"
 
 function SlideMenu() {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
     <>
-      <Button onClick={onToggle}>Menu</Button>
-      <Slide direction="bottom" in={isOpen} style={{ zIndex: 1200 }}>
+      <Button onClick={onToggle} size="sm" mr="4" variant="outline">
+        {isOpen === true ? "hide" : "menu"}
+      </Button>
+      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
         <Box
           p="40px"
           color="white"
@@ -16,14 +27,16 @@ function SlideMenu() {
           rounded="md"
           shadow="md"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque aperiam
-          exercitationem porro accusamus tenetur esse tempore! Rerum, molestias
-          voluptates. Iusto, unde voluptatum voluptas libero natus provident ex?
-          Provident voluptatibus rerum eligendi maxime, velit dignissimos soluta
-          temporibus sit deleniti earum veritatis consequatur porro quo
-          voluptates facere asperiores pariatur dicta adipisci odio unde vero
-          nostrum nesciunt? Modi suscipit, provident consectetur sapiente atque
-          sint ut veniam ex harum commodi nam iusto mollitia.
+          <Button onClick={onToggle} size="sm" mr="4" variant="outline">
+            {isOpen === true ? "hide" : "menu"}
+          </Button>
+          <Text>Menu Item</Text>
+          <Text>Menu Item</Text>
+          <Text>Menu Item</Text>
+          <Text>Menu Item</Text>
+          <Text>Menu Item</Text>
+          <Text>Menu Item</Text>
+          <Text>Menu Item</Text>
         </Box>
       </Slide>
     </>
@@ -31,8 +44,21 @@ function SlideMenu() {
 }
 
 const Header = () => (
-  <Flex pos="fixed" w="100%" p="4" borderTop="6px solid #1F7A8C">
-    {/* <SlideMenu /> */}
+  <Flex
+    pos="static"
+    alignItems="center"
+    w="100%"
+    px="4"
+    py="2"
+    borderTop="6px solid #1F7A8C"
+    borderBottom="1px solid #1F7A8C"
+  >
+    <Text fontWeight="bold" fontSize="2xl">
+      DC
+    </Text>
+    <Spacer />
+    <SlideMenu />
+    <ColorModeSwitcher />
   </Flex>
 )
 

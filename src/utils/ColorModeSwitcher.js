@@ -11,7 +11,7 @@ export const ColorModeSwitcher = props => {
   return (
     <IconButton
       size="lg"
-      fontSize="4xl"
+      fontSize="3xl"
       isRound="true"
       margin={{ base: "auto", md: "0" }}
       maxW="40px"

@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
 import Avatar from "../../assets/avataaars.svg"
-import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher"
 import { useStaticQuery, graphql } from "gatsby"
 
 function IntroSection() {
@@ -39,11 +38,7 @@ function IntroSection() {
           {data.site.siteMetadata.location}
         </Text>
       </Box>
-
       <Flex flexDirection="column" alignSelf="center">
-        <Box alignSelf="center">
-          <ColorModeSwitcher />
-        </Box>
         <Box>
           <Avatar />
         </Box>
