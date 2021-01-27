@@ -1,19 +1,21 @@
 import React from "react"
 // import { Link } from "gatsby"
-import { Box, Text } from "@chakra-ui/react"
+// import { Box, Text } from "@chakra-ui/react"
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
-import { IntroSection, AboutSection } from "../components/sections"
+import {
+  IntroSection,
+  AboutSection,
+  ProjectSection,
+} from "../components/sections"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <IntroSection />
     <AboutSection />
-    <Box w="100%" p={8} bg="blue.100">
-      <Text fontSize="xl">Section 3</Text>
-    </Box>
+    <ProjectSection />
     {/* <Box>
       <Image />
     </Box>
