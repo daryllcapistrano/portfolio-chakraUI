@@ -4,8 +4,8 @@ import { BiShapeCircle } from "@react-icons/all-files/bi/BiShapeCircle"
 
 function AboutSection() {
   return (
-    <Flex>
-      <Box w="100%" px={{ base: `10`, md: `20` }} py={10} bg="blue.500">
+    <Flex p={10} bg="blue.500">
+      <Box w={{ base: `100%`, md: `75%` }} m="auto">
         <Text fontSize="xl" textAlign="justify">
           I'm a<em> self-taught</em> web developer living in
           <strong> Las Vegas</strong>. I create websites and apps that are

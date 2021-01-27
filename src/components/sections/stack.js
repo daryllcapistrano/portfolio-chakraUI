@@ -1,9 +1,10 @@
 import React from "react"
-import { Box, VStack } from "@chakra-ui/react"
+import { Box, VStack, Text } from "@chakra-ui/react"
 
 function StackSection() {
   return (
     <VStack m="8">
+      <Text>Technologies I have been recently using</Text>
       <Box>JavaScript</Box>
       <Box>ReactJS</Box>
       <Box>ExpressJS</Box>

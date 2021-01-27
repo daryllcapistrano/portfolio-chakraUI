@@ -29,9 +29,10 @@ function IntroSection() {
       minH="100vh"
       bg={bg}
     >
-      <Box m="auto" pl={{ base: `10`, sm: `0` }}>
-        <Text fontSize="6xl" lineHeight="1.5">
-          {data.site.siteMetadata.title}
+      <Box m="auto">
+        <Text>Hi, I'm</Text>
+        <Text fontSize="6xl" lineHeight="1" fontWeight="bold">
+          {data.site.siteMetadata.author}
         </Text>
         <Text fontSize="lg" mt="2">
           {data.site.siteMetadata.description} in{" "}
