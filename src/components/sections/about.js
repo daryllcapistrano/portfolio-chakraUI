@@ -20,13 +20,20 @@ function AboutSection() {
           I'm a<em> self-taught</em> web developer living in
           <strong> Las Vegas</strong>. I create websites and apps that are
           thoughtfully designed and built with performance and accessability in
-          mind. My approach to learning is directly influenced by the trial and
-          error nature of skateboarding. As{" "}
-          <Link href="https://www.youtube.com/embed/EQLInlnfWUc" isExternal>
-            Werner Herzog
-          </Link>{" "}
-          says, "So many failures, it's astonishing...'"
+          mind. My approach to learning is influenced by the nature of
+          progression in skateboarding.
         </Text>
+        <Box mt="10" p="4" bg="gray.900" borderRadius="lg" textAlign="center">
+          <Text as="figure" m="0 auto">
+            <Link href="https://www.youtube.com/embed/EQLInlnfWUc" isExternal>
+              "You have to accept trial and error...so many failures, it's
+              astonishing."
+            </Link>
+            <figcaption>
+              &mdash; Werner Herzog, <cite>on skateboarding</cite>{" "}
+            </figcaption>
+          </Text>
+        </Box>
         <List spacing={2} mt="10">
           <Heading fontSize="lg">Goals for 2021:</Heading>
           <ListItem>
