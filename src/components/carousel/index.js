@@ -21,7 +21,7 @@ export default function Carousel() {
     infinite: true,
     autoplay: true,
     speed: 20000,
-    autoplaySpeed: 0,
+    autoplaySpeed: 0.01,
     cssEase: "linear",
     responsive: [
       {

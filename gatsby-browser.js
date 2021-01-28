@@ -9,15 +9,15 @@ import { ChakraProvider, CSSReset, ColorModeScript } from "@chakra-ui/react"
 import theme from "./src/gatsby-plugin/theme"
 // ! cant seem to get fonts to work
 import { Fonts } from "./src/gatsby-plugin/fonts"
+import Layout from "./src/components/layout"
 
 export const wrapRootElement = ({ element }) => {
   return (
-    // <ChakraProvider theme={customTheme}>
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <CSSReset />
       <Fonts />
-      {element}
+      <Layout>{element}</Layout>
     </ChakraProvider>
   )
 }

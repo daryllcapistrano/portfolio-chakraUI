@@ -1,7 +1,7 @@
 import React from "react"
 import GitHubCalendar from "react-github-calendar"
 import ReactTooltip from "react-tooltip"
-import { Box, Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
 import Carousel from "../carousel"
 
 function StackSection() {
