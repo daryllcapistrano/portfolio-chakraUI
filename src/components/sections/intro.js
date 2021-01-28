@@ -18,7 +18,7 @@ function IntroSection() {
     }
   `)
 
-  const bg = useColorModeValue("white", "gray.800")
+  const fontColor = useColorModeValue("black", "yellow.800")
 
   return (
     <Flex
@@ -26,14 +26,13 @@ function IntroSection() {
       justifyContent="space-between"
       w="100%"
       minH="100vh"
-      bg={bg}
     >
-      <Box m="auto">
+      <Box m="auto" pl={["6", "0"]}>
         <Text>Hi, I'm</Text>
-        <Text fontSize="6xl" lineHeight="1" fontWeight="bold">
+        <Text fontSize="6xl" lineHeight="none" fontWeight="black">
           {data.site.siteMetadata.author}
         </Text>
-        <Text fontSize="lg" mt="2">
+        <Text fontSize="lg" color={fontColor}>
           {data.site.siteMetadata.description} in{" "}
           {data.site.siteMetadata.location}
         </Text>
