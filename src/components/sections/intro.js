@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
-import Avatar from "../../assets/avataaars.svg"
+import Avatar from "../../assets/svg/avataaars.svg"
 import { useStaticQuery, graphql } from "gatsby"
 
 function IntroSection() {
@@ -37,10 +37,8 @@ function IntroSection() {
           {data.site.siteMetadata.location}
         </Text>
       </Box>
-      <Flex flexDirection="column" alignSelf="center">
-        <Box>
-          <Avatar />
-        </Box>
+      <Flex alignSelf="center">
+        <Avatar />
       </Flex>
     </Flex>
   )
