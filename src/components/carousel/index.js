@@ -49,7 +49,7 @@ export default function Carousel() {
   }
 
   return (
-    <Box m="10">
+    <Box mt="10">
       <Slider {...settings}>
         <Box>
           <JavaScript />
