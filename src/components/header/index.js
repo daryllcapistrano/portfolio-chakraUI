@@ -28,7 +28,7 @@ function SlideMenu() {
           shadow="md"
         >
           <Button onClick={onToggle} size="sm" mr="4" variant="outline">
-            {isOpen === true ? "hide" : "menu"}
+            x
           </Button>
           <Text>Menu Item</Text>
           <Text>Menu Item</Text>
@@ -51,7 +51,7 @@ const Header = () => (
     px="4"
     py="2"
     borderTop="6px solid #1F7A8C"
-    borderBottom="1px solid #1F7A8C"
+    borderBottom="1px solid rgb(31,122,140,.1)"
   >
     <Text fontWeight="bold" fontSize="2xl">
       DC
