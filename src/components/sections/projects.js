@@ -3,293 +3,88 @@ import { HiExternalLink as Icon } from "@react-icons/all-files/hi/HiExternalLink
 import {
   SimpleGrid,
   Box,
-  Flex,
   Text,
   Image,
   Heading,
-  Container,
   Link,
-  Spacer,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
 function ProjectSection() {
+  const bgColor = useColorModeValue("gray.300", "gray.900")
+
+  const projects = [
+    {
+      title: "Skate Spot App",
+      techStack: "ReactJS, Gatsby, StyledComponents",
+      description:
+        "A convenient way to log, find and share skate spots. An app for skateboarders",
+      githubLink: "https://github.com/daryllcapistrano/skatespot-client",
+    },
+    {
+      title: "Media Portfolio",
+      techStack: "ReactJS, Gatsby, StyledComponents, GraphQL",
+      description:
+        "Keaton Rodgers' minimal web portfolio presenting their photo and video work. A static site using GraphQL to query for data and images",
+      githubLink:
+        "https://github.com/daryllcapistrano/keaton-portfolio-gatsby-v2",
+    },
+    {
+      title: "Game of S.K.A.T.E.",
+      techStack: "ReactJS, Gatsby, StyledComponents",
+      description:
+        "S.K.A.T.E. game score tracker using React hooks to extract stateful logic from components",
+      githubLink: "https://github.com/daryllcapistrano/Game-of-SKATE",
+    },
+    {
+      title: "ColorBlind Compatible Color Palettes",
+      techStack: "ReactJS, ChakraUI",
+      description:
+        "A tool to quickly visualize colorblind-friendly color palettes",
+      githubLink: "https://github.com/daryllcapistrano/Game-of-SKATE",
+    },
+  ]
+
   return (
-    <Box py="8" px={{ base: `0`, sm: `10` }} bg="blue.100">
-      <Container>
-        <Heading textAlign="center">Projects</Heading>
-      </Container>
-      <SimpleGrid
-        columns={[1, null, 3]}
-        justifyItems="center"
-        spacing={{ base: `16`, md: `8` }}
-        mt="10"
-      >
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Title</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub
-              <Icon />
-            </Link>
-          </Flex>
-        </Container>
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Title</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub
-              <Icon />
-            </Link>
-          </Flex>
-        </Container>
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Title</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub
-              <Icon />
-            </Link>
-          </Flex>
-        </Container>
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Title</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub
-              <Icon />
-            </Link>
-          </Flex>
-        </Container>
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Title</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub
-              <Icon />
-            </Link>
-          </Flex>
-        </Container>
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Title</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub <Icon />
-            </Link>
-          </Flex>
-        </Container>
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Title</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub <Icon />
-            </Link>
-          </Flex>
-        </Container>
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Title</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub <Icon />
-            </Link>
-          </Flex>
-        </Container>
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Title</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub <Icon />
-            </Link>
-          </Flex>
-        </Container>
-        <Container>
-          <Box>
-            <Image
-              src="https://picsum.photos/seed/picsum/350/200"
-              borderRadius="lg"
-              boxShadow="lg"
-            />
-          </Box>
-          <Heading>Project Name</Heading>
-          <Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            blanditiis corrupti facere atque ipsa deserunt.
-          </Text>
-          <Flex mt="1">
-            <Spacer />
-            <Link
-              href="https://github.com"
-              isExternal
-              display="inline-flex"
-              alignItems="center"
-              mr="2"
-            >
-              GitHub <Icon />
-            </Link>
-          </Flex>
-        </Container>
-      </SimpleGrid>
+    <Box id="projects" minH="100vh" py="10" bg={bgColor}>
+      <Box px="4" w={{ base: `100%`, md: `75%` }} m="0 auto">
+        <Heading borderBottom="1px" fontWeight="black">
+          Projects
+        </Heading>
+        <SimpleGrid
+          columns={[1, 2]}
+          justifyItems="center"
+          gap="10"
+          m="0 auto"
+          mt="10"
+        >
+          {projects.map((project, index) => (
+            <Box key={index} maxW="400px">
+              <Image
+                src="https://picsum.photos/seed/picsum/400/200.webp"
+                borderRadius="md"
+                boxShadow="base"
+              />
+              <Box mt="2" px="2">
+                <Heading fontSize="lg" color="blue.500">
+                  {project.title}
+                </Heading>
+                <Text fontSize="sm">{project.description}</Text>
+                <Link
+                  href={project.githubLink}
+                  isExternal
+                  display="inline-flex"
+                  alignItems="center"
+                  mt="2"
+                >
+                  GitHub
+                  <Icon />
+                </Link>
+              </Box>
+            </Box>
+          ))}
+        </SimpleGrid>
+      </Box>
     </Box>
   )
 }

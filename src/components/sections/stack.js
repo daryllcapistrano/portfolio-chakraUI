@@ -1,7 +1,7 @@
 import React from "react"
 import GitHubCalendar from "react-github-calendar"
 import ReactTooltip from "react-tooltip"
-import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, Heading, Text, useColorModeValue } from "@chakra-ui/react"
 import Carousel from "../carousel"
 
 function StackSection() {
@@ -18,45 +18,40 @@ function StackSection() {
   }
 
   return (
-    <Box mt="10" p="10" w={{ base: `100%`, md: `75%` }} m="auto">
-      <Text fontSize="2xl" fontWeight="bold" textAlign="center">
-        Languages / Frameworks / Technology
-      </Text>
+    <Box
+      id="stack"
+      minH="100vh"
+      py="10"
+      px="4"
+      w={{ base: `100%`, md: `75%` }}
+      m="auto"
+    >
+      <Heading borderBottom="1px" fontWeight="black">
+        Skills
+      </Heading>
       <Carousel />
       <Box mt="10">
         <Text as="h3" fontSize="xl" fontWeight="bold">
           Main Skills
         </Text>
         <Text mb="2">
-          The technology that I use on a daily basis and I am most proficient at
-          are JavaScript/ES6, React, Gatsby, GraphQL, Git, CSS3 and HTML.
+          JavaScript/ES6, React, Gatsby, GraphQL, Git, CSS3/Sass and HTML.
         </Text>
       </Box>
       <Box mt="10">
         <Text as="h3" fontSize="xl" fontWeight="bold">
           Secondary Skills
         </Text>
-        <Text mb="2">
-          The technology that I use less frquently but still proficient at are
-          Python, Node.js, jQuery, SQL, MongoDB and Express
-        </Text>
+        <Text mb="2">Python, Node.js, jQuery, SQL, MongoDB and Express</Text>
       </Box>
       <Box mt="10">
         <Text as="h3" fontSize="xl" fontWeight="bold">
-          My Focus
+          Other Skills
         </Text>
-        <Text mb="2">
-          Moving into this new year, I would like to learn TypeScript,
-          WebSockets and code-splitting. As well as, learning how to make my
-          work more A11y compliant
-        </Text>
+        <Text mb="2">Photoshop, Illustrator, Slappys and Kickflips</Text>
       </Box>
       <Flex justifyContent="center" mt="10">
-        <GitHubCalendar
-          username="daryllcapistrano"
-          theme={calendarTheme}
-          // showTotalCount={false}
-        >
+        <GitHubCalendar username="daryllcapistrano" theme={calendarTheme}>
           <ReactTooltip delayShow={50} html />
         </GitHubCalendar>
       </Flex>

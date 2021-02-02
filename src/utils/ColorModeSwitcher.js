@@ -13,7 +13,6 @@ export const ColorModeSwitcher = props => {
       size="lg"
       fontSize="3xl"
       isRound="true"
-      margin={{ base: "auto", md: "0" }}
       maxW="40px"
       aria-label={`Switch to ${text} mode`}
       variant="ghost"

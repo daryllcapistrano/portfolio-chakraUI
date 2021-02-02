@@ -1,13 +1,16 @@
 import React from "react"
 import {
   Flex,
+  Box,
   Button,
   Slide,
-  Box,
   useDisclosure,
   Spacer,
-  Text,
+  CloseButton,
+  Link,
 } from "@chakra-ui/react"
+import { Link as GatsbyLink } from "gatsby"
+
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher"
 
 function SlideMenu() {
@@ -15,28 +18,24 @@ function SlideMenu() {
 
   return (
     <>
-      <Button onClick={onToggle} size="sm" mr="4" variant="outline">
-        {isOpen === true ? "hide" : "menu"}
+      <Button onClick={onToggle} size="sm" ml="2" variant="ghost">
+        MENU
       </Button>
-      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
-        <Box
-          p="40px"
-          color="white"
-          mt="4"
-          bg="#1F7A8C"
-          rounded="md"
-          shadow="md"
-        >
-          <Button onClick={onToggle} size="sm" mr="4" variant="outline">
-            x
-          </Button>
-          <Text>Menu Item</Text>
-          <Text>Menu Item</Text>
-          <Text>Menu Item</Text>
-          <Text>Menu Item</Text>
-          <Text>Menu Item</Text>
-          <Text>Menu Item</Text>
-          <Text>Menu Item</Text>
+      <Slide direction="top" in={isOpen} style={{ zIndex: 10 }}>
+        <Box color="white" bg="gray.900" shadow="md">
+          <Flex p="20px">
+            <Spacer />
+            <CloseButton onClick={onToggle} />
+          </Flex>
+          <Link as={GatsbyLink} to="#about" onClick={onToggle}>
+            About
+          </Link>
+          <Link as={GatsbyLink} to="#stack" onClick={onToggle}>
+            Stack
+          </Link>
+          <Link as={GatsbyLink} to="#projects" onClick={onToggle}>
+            Projects
+          </Link>
         </Box>
       </Slide>
     </>
@@ -45,20 +44,17 @@ function SlideMenu() {
 
 const Header = () => (
   <Flex
-    pos="static"
+    as="header"
+    pos="absolute"
     alignItems="center"
+    borderTop="6px solid #1F7A8C"
     w="100%"
     px="4"
     py="2"
-    borderTop="6px solid #1F7A8C"
-    borderBottom="1px solid rgb(31,122,140,.1)"
   >
-    <Text fontWeight="bold" fontSize="2xl">
-      DC
-    </Text>
+    <ColorModeSwitcher />
     <Spacer />
     <SlideMenu />
-    <ColorModeSwitcher />
   </Flex>
 )
 
