@@ -8,6 +8,7 @@ import {
   Spacer,
   CloseButton,
   Link,
+  VStack,
 } from "@chakra-ui/react"
 import { Link as GatsbyLink } from "gatsby"
 
@@ -22,20 +23,25 @@ function SlideMenu() {
         MENU
       </Button>
       <Slide direction="top" in={isOpen} style={{ zIndex: 10 }}>
-        <Box color="white" bg="gray.900" shadow="md">
-          <Flex p="20px">
+        <Box minH="50vh" color="white" bg="gray.900" shadow="md">
+          <Flex p="4">
             <Spacer />
             <CloseButton onClick={onToggle} />
           </Flex>
-          <Link as={GatsbyLink} to="#about" onClick={onToggle}>
-            About
-          </Link>
-          <Link as={GatsbyLink} to="#stack" onClick={onToggle}>
-            Stack
-          </Link>
-          <Link as={GatsbyLink} to="#projects" onClick={onToggle}>
-            Projects
-          </Link>
+          <VStack p="10">
+            <Link as={GatsbyLink} to="#about" onClick={onToggle}>
+              About
+            </Link>
+            <Link as={GatsbyLink} to="#stack" onClick={onToggle}>
+              Stack
+            </Link>
+            <Link as={GatsbyLink} to="#projects" onClick={onToggle}>
+              Projects
+            </Link>
+            <Link as={GatsbyLink} to="#contact" onClick={onToggle}>
+              Contact
+            </Link>
+          </VStack>
         </Box>
       </Slide>
     </>
