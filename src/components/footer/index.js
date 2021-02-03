@@ -6,6 +6,7 @@ import {
   HStack,
   Heading,
   IconButton,
+  Link,
 } from "@chakra-ui/react"
 
 import { SiGmail } from "@react-icons/all-files/si/SiGmail"
@@ -15,7 +16,7 @@ import { SiInstagram } from "@react-icons/all-files/si/SiInstagram"
 
 const Footer = () => {
   return (
-    <Box id="contact" minH="100vh" pt="10" pb="2">
+    <Box id="contact" minH="50vh" pt="10" pb="2">
       <Box px="4" w={{ base: `100%`, md: `75%` }} m="0 auto">
         <Heading borderBottom="1px" fontWeight="black" pl="2">
           Get in touch
@@ -24,31 +25,42 @@ const Footer = () => {
           <Box>
             <Text textAlign="center">
               I am actively looking for job opportunities to contribute my
-              skills. Reach me at:
+              skills.
             </Text>
           </Box>
           <Box>
             <HStack justifyContent="space-evenly">
-              <IconButton
-                aria-label="send me an email"
-                icon={<SiGmail />}
-                isRound
-              ></IconButton>
-              <IconButton
-                aria-label="check out my LinkedIN"
-                icon={<SiLinkedin />}
-                isRound
-              ></IconButton>
-              <IconButton
-                aria-label="check out my GitHub"
-                icon={<SiGithub />}
-                isRound
-              ></IconButton>
-              <IconButton
-                aria-label="check out my Instagram"
-                icon={<SiInstagram />}
-                isRound
-              ></IconButton>
+              <Link href="mailto:dcapistrano.dev@gmail.com" isExternal>
+                <IconButton
+                  aria-label="send me an email"
+                  icon={<SiGmail />}
+                  isRound
+                />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/daryll-capistrano-142b32202/"
+                isExternal
+              >
+                <IconButton
+                  aria-label="check out my LinkedIN"
+                  icon={<SiLinkedin />}
+                  isRound
+                />
+              </Link>
+              <Link href="https://wwww.github.com/daryllcapistrano" isExternal>
+                <IconButton
+                  aria-label="check out my GitHub"
+                  icon={<SiGithub />}
+                  isRound
+                />
+              </Link>
+              <Link href="https://www.instagram.com/brotherdaryll/" isExternal>
+                <IconButton
+                  aria-label="check out my Instagram"
+                  icon={<SiInstagram />}
+                  isRound
+                />
+              </Link>
             </HStack>
           </Box>
         </SimpleGrid>

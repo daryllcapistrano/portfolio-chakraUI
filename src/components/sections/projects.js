@@ -60,11 +60,13 @@ function ProjectSection() {
         >
           {projects.map((project, index) => (
             <Box key={index} maxW="400px">
-              <Image
-                src="https://picsum.photos/seed/picsum/400/200.webp"
-                borderRadius="md"
-                boxShadow="base"
-              />
+              <Link href={project.githubLink}>
+                <Image
+                  src="https://picsum.photos/seed/picsum/400/200.webp"
+                  borderRadius="md"
+                  boxShadow="base"
+                />
+              </Link>
               <Box mt="2" px="2">
                 <Heading fontSize="lg" color="blue.500">
                   {project.title}
