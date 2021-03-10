@@ -15,6 +15,14 @@ function ProjectSection() {
 
   const projects = [
     {
+      title: "Skate Referee",
+      techStack: "ReactJS, ChakraUI",
+      description:
+        "S.K.A.T.E. game score tracker using React hooks to extract stateful logic from components",
+      githubLink: "https://github.com/daryllcapistrano/skate-referee",
+      externalLink: "https://daryllcapistrano.github.io/skate-referee/",
+    },
+    {
       title: "Skate Spot App",
       techStack: "ReactJS, Gatsby, StyledComponents",
       description:
@@ -28,13 +36,6 @@ function ProjectSection() {
         "Keaton Rodgers' minimal web portfolio presenting their photo and video work. A static site using GraphQL to query for data and images",
       githubLink:
         "https://github.com/daryllcapistrano/keaton-portfolio-gatsby-v2",
-    },
-    {
-      title: "Game of S.K.A.T.E.",
-      techStack: "ReactJS, Gatsby, StyledComponents",
-      description:
-        "S.K.A.T.E. game score tracker using React hooks to extract stateful logic from components",
-      githubLink: "https://github.com/daryllcapistrano/Game-of-SKATE",
     },
     {
       title: "ColorBlind Compatible Color Palettes",
@@ -67,7 +68,7 @@ function ProjectSection() {
                   boxShadow="base"
                 />
               </Link>
-              <Box mt="2" px="2">
+              <Box mt="2" px="1">
                 <Heading fontSize="lg" color="blue.500">
                   {project.title}
                 </Heading>
@@ -80,6 +81,17 @@ function ProjectSection() {
                   mt="2"
                 >
                   GitHub
+                  <Icon />
+                </Link>
+
+                <Link
+                  href={project.externalLink}
+                  isExternal
+                  display="inline-flex"
+                  alignItems="center"
+                  mt="2"
+                >
+                  Check it out
                   <Icon />
                 </Link>
               </Box>

@@ -19,7 +19,7 @@ function SlideMenu() {
 
   return (
     <>
-      <Button onClick={onToggle} size="sm" ml="2" variant="ghost">
+      <Button onClick={onToggle} size="sm" ml="2" variant="outline">
         MENU
       </Button>
       <Slide direction="top" in={isOpen} style={{ zIndex: 10 }}>
