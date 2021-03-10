@@ -12,15 +12,22 @@ import {
 } from "@chakra-ui/react"
 import { Link as GatsbyLink } from "gatsby"
 
+import { IconContext } from "@react-icons/all-files"
+import { HiMenu } from "@react-icons/all-files/hi/HiMenu"
+
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher"
 
-function SlideMenu() {
+function Menu() {
   const { isOpen, onToggle } = useDisclosure()
 
   return (
     <>
-      <Button onClick={onToggle} size="sm" ml="2" variant="outline">
-        MENU
+      <Button onClick={onToggle} size="md" variant="ghost">
+        <IconContext.Provider value={{ size: "2em" }}>
+          <div>
+            <HiMenu />
+          </div>
+        </IconContext.Provider>
       </Button>
       <Slide direction="top" in={isOpen} style={{ zIndex: 10 }}>
         <Box minH="50vh" color="white" bg="gray.900" shadow="md">
@@ -60,7 +67,7 @@ const Header = () => (
   >
     <Spacer />
     <ColorModeSwitcher />
-    <SlideMenu />
+    <Menu />
   </Flex>
 )
 
