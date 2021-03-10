@@ -1,12 +1,12 @@
 import React from "react"
 import { useColorMode, useColorModeValue, IconButton } from "@chakra-ui/react"
-import { GiStripedSun } from "@react-icons/all-files/gi/GiStripedSun"
-import { GiMoonOrbit } from "@react-icons/all-files/gi/GiMoonOrbit"
+import { RiSunFill } from "@react-icons/all-files/ri/RiSunFill"
+import { RiMoonClearFill } from "@react-icons/all-files/ri/RiMoonClearFill"
 
 export const ColorModeSwitcher = props => {
   const { toggleColorMode } = useColorMode()
   const text = useColorModeValue("dark", "light")
-  const SwitchIcon = useColorModeValue(GiMoonOrbit, GiStripedSun)
+  const SwitchIcon = useColorModeValue(RiMoonClearFill, RiSunFill)
 
   return (
     <IconButton

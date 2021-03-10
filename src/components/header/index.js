@@ -58,8 +58,8 @@ const Header = () => (
     px="4"
     py="2"
   >
-    <ColorModeSwitcher />
     <Spacer />
+    <ColorModeSwitcher />
     <SlideMenu />
   </Flex>
 )
