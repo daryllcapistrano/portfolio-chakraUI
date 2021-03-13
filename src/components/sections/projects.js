@@ -17,8 +17,7 @@ function ProjectSection() {
     {
       title: "Skate Referee",
       techStack: "ReactJS, ChakraUI",
-      description:
-        "S.K.A.T.E. game score tracker using React hooks to extract stateful logic from components",
+      description: "S.K.A.T.E. game score tracker using React hooks",
       githubLink: "https://github.com/daryllcapistrano/skate-referee",
       externalLink: "https://daryllcapistrano.github.io/skate-referee/",
     },
@@ -33,7 +32,7 @@ function ProjectSection() {
       title: "Media Portfolio",
       techStack: "ReactJS, Gatsby, StyledComponents, GraphQL",
       description:
-        "Keaton Rodgers' minimal web portfolio presenting their photo and video work. A static site using GraphQL to query for data and images",
+        "Portfolio page presenting Keaton Rodgers' photo and video work using GraphQL to query for data and images",
       githubLink:
         "https://github.com/daryllcapistrano/keaton-portfolio-gatsby-v2",
     },
@@ -42,7 +41,8 @@ function ProjectSection() {
       techStack: "ReactJS, ChakraUI",
       description:
         "A tool to quickly visualize colorblind-friendly color palettes",
-      githubLink: "https://github.com/daryllcapistrano/Game-of-SKATE",
+      githubLink:
+        "https://github.com/daryllcapistrano/colorblind-palette-generator",
     },
   ]
 

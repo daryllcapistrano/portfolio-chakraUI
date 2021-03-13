@@ -13,7 +13,7 @@ function AboutSection() {
         <Heading color={fontColor} borderBottom="1px" fontWeight="black">
           Who Am I?
         </Heading>
-        <Text textAlign="justify" mt="6" lineHeight="8">
+        <Text mt="6">
           I'm a<em> self-taught</em> web developer and skateboarder. I make
           websites and apps that are thoughtfully designed, built with
           performance and accessability in mind. One thing that attracted me to
@@ -24,26 +24,6 @@ function AboutSection() {
           is similar to trying a trick, over and over again, then finally roll
           away clean. There is no better feeling!
         </Text>
-        <Box
-          m="0 auto"
-          mt="10"
-          p="4"
-          w="fit-content"
-          bg={bgColorQuote}
-          borderRadius="xl"
-          textAlign="center"
-          shadow="base"
-        >
-          <Text as="figure">
-            <Link href="https://www.youtube.com/embed/EQLInlnfWUc" isExternal>
-              "You have to accept trial and error...so many failures...it's
-              astonishing."
-            </Link>
-          </Text>
-          <Text as="figcaption">
-            &mdash; Werner Herzog, <cite>on skateboarding</cite>{" "}
-          </Text>
-        </Box>
       </Box>
     </Box>
   )

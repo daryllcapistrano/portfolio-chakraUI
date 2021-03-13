@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Box, Flex, Text, useColorModeValue } from "@chakra-ui/react"
-import Avatar from "../../assets/svg/avataaars.svg"
+import { Box, Center, Text, useColorModeValue } from "@chakra-ui/react"
+// import Avatar from "../../assets/svg/avataaars.svg"
 import { useStaticQuery, graphql } from "gatsby"
 
 function IntroSection() {
@@ -21,13 +21,8 @@ function IntroSection() {
   const fontColor = useColorModeValue("gray.500", "blue.500")
 
   return (
-    <Flex
-      flexDirection="column"
-      justifyContent="space-between"
-      w="100%"
-      minH="100vh"
-    >
-      <Box m="auto" pl={["6", "0"]}>
+    <Center minH="100vh">
+      <Box pl={["6", "0"]}>
         <Text fontSize="6xl" lineHeight="none" fontWeight="black">
           {data.site.siteMetadata.author}
         </Text>
@@ -36,10 +31,7 @@ function IntroSection() {
           {data.site.siteMetadata.location}
         </Text>
       </Box>
-      <Flex alignSelf="center">
-        <Avatar />
-      </Flex>
-    </Flex>
+    </Center>
   )
 }
 

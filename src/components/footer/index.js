@@ -47,7 +47,7 @@ const Footer = () => {
                   isRound
                 />
               </Link>
-              <Link href="https://wwww.github.com/daryllcapistrano" isExternal>
+              <Link href="https://www.github.com/daryllcapistrano" isExternal>
                 <IconButton
                   aria-label="check out my GitHub"
                   icon={<SiGithub />}
