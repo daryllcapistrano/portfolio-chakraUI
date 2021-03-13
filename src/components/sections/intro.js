@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
+import Typed from "typed.js"
 import PropTypes from "prop-types"
 import { Box, Center, Text, useColorModeValue } from "@chakra-ui/react"
 // import Avatar from "../../assets/svg/avataaars.svg"
@@ -18,7 +19,26 @@ function IntroSection() {
     }
   `)
 
+  const formattedText =
+    data.site.siteMetadata.description +
+    " in " +
+    data.site.siteMetadata.location
+
   const fontColor = useColorModeValue("gray.500", "blue.500")
+
+  useEffect(() => {
+    // Options for the Typed object
+    const options = {
+      strings: [formattedText],
+      typeSpeed: 50,
+    }
+    // New Typed instance
+    const typed = new Typed("#typed", options)
+    // Destroy Typed instance on unmounting the component to prevent memory leaks
+    return () => {
+      typed.destroy()
+    }
+  }, [formattedText])
 
   return (
     <Center minH="100vh">
@@ -26,10 +46,14 @@ function IntroSection() {
         <Text fontSize="6xl" lineHeight="none" fontWeight="black">
           {data.site.siteMetadata.author}
         </Text>
-        <Text fontSize="lg" color={fontColor} mt="2">
-          {data.site.siteMetadata.description} in{" "}
-          {data.site.siteMetadata.location}
-        </Text>
+        <Text
+          id="typed"
+          fontSize="lg"
+          color={fontColor}
+          mt="2"
+          display="inline-flex"
+          whiteSpace="pre"
+        ></Text>
       </Box>
     </Center>
   )
