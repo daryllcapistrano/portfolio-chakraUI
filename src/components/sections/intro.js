@@ -19,7 +19,7 @@ function IntroSection() {
     }
   `)
 
-  const formattedText =
+  const formattedDesc =
     data.site.siteMetadata.description +
     " in " +
     data.site.siteMetadata.location
@@ -29,7 +29,7 @@ function IntroSection() {
   useEffect(() => {
     // Options for the Typed object
     const options = {
-      strings: [formattedText],
+      strings: [formattedDesc],
       typeSpeed: 50,
     }
     // New Typed instance
@@ -38,7 +38,7 @@ function IntroSection() {
     return () => {
       typed.destroy()
     }
-  }, [formattedText])
+  }, [formattedDesc])
 
   return (
     <Center minH="100vh">

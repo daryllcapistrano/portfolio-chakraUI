@@ -1,11 +1,11 @@
 import React from "react"
-import { Box, Text, Heading, Link, useColorModeValue } from "@chakra-ui/react"
+import { Box, Text, Heading, useColorModeValue } from "@chakra-ui/react"
 
 function AboutSection() {
   const fontColor = useColorModeValue("black", "white")
   const bgColor = useColorModeValue("gray.300", "gray.900")
   // const quoteTextColor = useColorModeValue("gray.700", "gray.500")
-  const bgColorQuote = useColorModeValue("gray.500", "gray.700")
+  // const bgColorQuote = useColorModeValue("gray.500", "gray.700")
 
   return (
     <Box id="about" minH="100vh" px="4" bg={bgColor}>

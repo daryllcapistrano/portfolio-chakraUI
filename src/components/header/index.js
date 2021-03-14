@@ -9,6 +9,7 @@ import {
   CloseButton,
   Link,
   VStack,
+  Text,
 } from "@chakra-ui/react"
 import { Link as GatsbyLink } from "gatsby"
 
@@ -24,29 +25,35 @@ function Menu() {
     <>
       <Button onClick={onToggle} size="md" variant="ghost">
         <IconContext.Provider value={{ size: "2em" }}>
-          <div>
-            <HiMenu />
-          </div>
+          <HiMenu />
         </IconContext.Provider>
       </Button>
       <Slide direction="top" in={isOpen} style={{ zIndex: 10 }}>
-        <Box minH="50vh" color="white" bg="gray.900" shadow="md">
+        <Box color="white" bg="gray.900" shadow="md">
           <Flex p="4">
             <Spacer />
-            <CloseButton onClick={onToggle} />
+            <CloseButton onClick={onToggle} size="lg" marginRight=".75em" />
           </Flex>
-          <VStack p="10">
-            <Link as={GatsbyLink} to="#about" onClick={onToggle}>
-              About
+          <VStack minH="100vh" p="8" spacing={6} alignItems="flex-start">
+            <Link as={GatsbyLink} to="/" onClick={onToggle}>
+              <Text fontSize="3xl" fontWeight="black">
+                Home
+              </Text>
             </Link>
-            <Link as={GatsbyLink} to="#stack" onClick={onToggle}>
-              Stack
+            <Link as={GatsbyLink} to="#about" onClick={onToggle}>
+              <Text fontSize="3xl" fontWeight="black">
+                About
+              </Text>
             </Link>
             <Link as={GatsbyLink} to="#projects" onClick={onToggle}>
-              Projects
+              <Text fontSize="3xl" fontWeight="black">
+                Work
+              </Text>
             </Link>
             <Link as={GatsbyLink} to="#contact" onClick={onToggle}>
-              Contact
+              <Text fontSize="3xl" fontWeight="black">
+                Contact
+              </Text>
             </Link>
           </VStack>
         </Box>
@@ -62,8 +69,7 @@ const Header = () => (
     alignItems="center"
     borderTop="6px solid #1F7A8C"
     w="100%"
-    px="4"
-    py="2"
+    p="2"
   >
     <Spacer />
     <ColorModeSwitcher />
