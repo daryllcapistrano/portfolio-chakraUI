@@ -1,6 +1,6 @@
 import React from "react"
-import { HiExternalLink as Icon } from "@react-icons/all-files/hi/HiExternalLink"
 import {
+  Button,
   SimpleGrid,
   Box,
   Text,
@@ -8,6 +8,7 @@ import {
   Heading,
   Link,
   useColorModeValue,
+  ButtonGroup,
 } from "@chakra-ui/react"
 
 function ProjectSection() {
@@ -47,58 +48,52 @@ function ProjectSection() {
   ]
 
   return (
-    <Box id="projects" minH="100vh" py="10" bg={bgColor}>
-      <Box px="4" w={{ base: `100%`, md: `75%` }} m="0 auto">
-        <Heading borderBottom="1px" fontWeight="black">
-          Projects
-        </Heading>
-        <SimpleGrid
-          columns={[1, 2]}
-          justifyItems="center"
-          gap="10"
-          m="0 auto"
-          mt="10"
-        >
-          {projects.map((project, index) => (
-            <Box key={index} maxW="400px">
-              <Link href={project.githubLink}>
-                <Image
-                  src="https://picsum.photos/seed/picsum/400/200.webp"
-                  borderRadius="md"
-                  boxShadow="base"
-                />
-              </Link>
-              <Box mt="2" px="1">
-                <Heading fontSize="lg" color="blue.500">
-                  {project.title}
-                </Heading>
-                <Text fontSize="sm">{project.description}</Text>
-                <Link
-                  href={project.githubLink}
-                  isExternal
-                  display="inline-flex"
-                  alignItems="center"
-                  mt="2"
-                >
-                  GitHub
-                  <Icon />
-                </Link>
-
-                <Link
-                  href={project.externalLink}
-                  isExternal
-                  display="inline-flex"
-                  alignItems="center"
-                  mt="2"
-                >
-                  Check it out
-                  <Icon />
-                </Link>
-              </Box>
+    <Box id="projects" minH="100vh" px="8" py="16" bg={bgColor}>
+      <Heading fontWeight="black">Projects</Heading>
+      <SimpleGrid columns={1} spacing={20}>
+        {projects.map((project, index) => (
+          <Box key={index}>
+            <Image
+              src="https://picsum.photos/seed/picsum/400/200.webp"
+              boxShadow="base"
+            />
+            <Heading mt="2">{project.title}</Heading>
+            <Text fontSize="lg" mt="2">
+              {project.description}
+            </Text>
+            <Box
+              bgColor="rgba(0, 0, 0, 0.2)"
+              width="fit-content"
+              mt="4"
+              px="5"
+              py="2"
+              borderRadius="md"
+            >
+              <Text display="block" fontSize="sm">
+                {project.techStack}
+              </Text>
             </Box>
-          ))}
-        </SimpleGrid>
-      </Box>
+            <ButtonGroup mt="6" spacing="6" colorScheme="telegram">
+              <Link
+                href={project.externalLink}
+                isExternal
+                _hover={{ textDecoration: "none" }}
+              >
+                <Button shadow="base">LIVE PREVIEW</Button>
+              </Link>
+              <Link
+                href={project.githubLink}
+                isExternal
+                _hover={{ textDecoration: "none" }}
+              >
+                <Button variant="link" height="100%">
+                  VIEW CODE
+                </Button>
+              </Link>
+            </ButtonGroup>
+          </Box>
+        ))}
+      </SimpleGrid>
     </Box>
   )
 }
