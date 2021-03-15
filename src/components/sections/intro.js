@@ -31,6 +31,7 @@ function IntroSection() {
     const options = {
       strings: [formattedDesc],
       typeSpeed: 50,
+      cursorChar: "|",
     }
     // New Typed instance
     const typed = new Typed("#typed", options)
@@ -43,15 +44,13 @@ function IntroSection() {
   return (
     <Center minH="100vh">
       <Box pl={["6", "0"]}>
-        <Text fontSize="6xl" lineHeight="none" fontWeight="black">
+        <Text fontSize="6xl" mb="2" lineHeight="none" fontWeight="black">
           {data.site.siteMetadata.author}
         </Text>
         <Text
           id="typed"
-          fontSize="lg"
-          color={fontColor}
-          mt="2"
           display="inline-flex"
+          color={fontColor}
           whiteSpace="pre"
         ></Text>
       </Box>

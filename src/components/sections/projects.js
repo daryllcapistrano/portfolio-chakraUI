@@ -70,7 +70,6 @@ function ProjectSection() {
               borderRadius="md"
             >
               <Text display="block" fontSize="sm">
-                <b>Stack: </b>
                 {project.techStack}
               </Text>
             </Box>
