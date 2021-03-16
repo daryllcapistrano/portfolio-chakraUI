@@ -16,60 +16,46 @@ import { SiInstagram } from "@react-icons/all-files/si/SiInstagram"
 
 const Footer = () => {
   return (
-    <Box id="contact" minH="50vh" pt="10" pb="2">
-      <Box px="4" w={{ base: `100%`, md: `75%` }} m="0 auto">
-        <Heading borderBottom="1px" fontWeight="black" pl="2">
-          Get in touch
-        </Heading>
-        <SimpleGrid columns={[1, null, 2]} spacing="40px" mt="10">
-          <Box>
-            <Text textAlign="center">
-              I am actively looking for job opportunities to contribute my
-              skills.
-            </Text>
-          </Box>
-          <Box>
-            <HStack justifyContent="space-evenly">
-              <Link href="mailto:dcapistrano.dev@gmail.com" isExternal>
-                <IconButton
-                  aria-label="send me an email"
-                  icon={<SiGmail />}
-                  isRound
-                />
-              </Link>
-              <Link
-                href="https://www.linkedin.com/in/daryll-capistrano-142b32202/"
-                isExternal
-              >
-                <IconButton
-                  aria-label="check out my LinkedIN"
-                  icon={<SiLinkedin />}
-                  isRound
-                />
-              </Link>
-              <Link href="https://www.github.com/daryllcapistrano" isExternal>
-                <IconButton
-                  aria-label="check out my GitHub"
-                  icon={<SiGithub />}
-                  isRound
-                />
-              </Link>
-              <Link href="https://www.instagram.com/brotherdaryll/" isExternal>
-                <IconButton
-                  aria-label="check out my Instagram"
-                  icon={<SiInstagram />}
-                  isRound
-                />
-              </Link>
-            </HStack>
-          </Box>
-        </SimpleGrid>
-      </Box>
-      {/* <Box>
-        <Text fontSize="xs" textAlign="center">
-          © {new Date().getFullYear()} Daryll Capistrano
+    <Box id="contact" px="8" py="16">
+      <Heading fontWeight="black">Get in touch</Heading>
+      <SimpleGrid columns={[1, null, 2]} spacing="12" mt="4">
+        <Text>
+          I am actively looking for job opportunities to contribute my skills.
         </Text>
-      </Box> */}
+        <HStack justifyContent="space-between">
+          <Link href="mailto:dcapistrano.dev@gmail.com" isExternal>
+            <IconButton
+              aria-label="send me an email"
+              icon={<SiGmail />}
+              isRound
+            />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/daryll-capistrano-142b32202/"
+            isExternal
+          >
+            <IconButton
+              aria-label="check out my LinkedIN"
+              icon={<SiLinkedin />}
+              isRound
+            />
+          </Link>
+          <Link href="https://www.github.com/daryllcapistrano" isExternal>
+            <IconButton
+              aria-label="check out my GitHub"
+              icon={<SiGithub />}
+              isRound
+            />
+          </Link>
+          <Link href="https://www.instagram.com/brotherdaryll/" isExternal>
+            <IconButton
+              aria-label="check out my Instagram"
+              icon={<SiInstagram />}
+              isRound
+            />
+          </Link>
+        </HStack>
+      </SimpleGrid>
     </Box>
   )
 }
