@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Daryll Capistrano Portfolio`,
+    title: `Daryll Capistrano`,
     description: `Web Developer`,
     author: `Daryll Capistrano`,
     location: `Las Vegas, NV`,
@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/avataaars.png`, // This path is relative to the root of the site.
       },
     },
     {

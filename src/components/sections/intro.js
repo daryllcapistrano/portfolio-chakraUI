@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Typed from "typed.js"
 import PropTypes from "prop-types"
-import { Box, Center, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Center, Text } from "@chakra-ui/react"
 // import Avatar from "../../assets/svg/avataaars.svg"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -24,8 +24,6 @@ function IntroSection() {
     " in " +
     data.site.siteMetadata.location
 
-  const fontColor = useColorModeValue("gray.500", "blue.500")
-
   useEffect(() => {
     // Options for the Typed object
     const options = {
@@ -44,14 +42,21 @@ function IntroSection() {
   return (
     <Center minH="100vh">
       <Box pl={["6", "0"]}>
-        <Text fontSize="6xl" mb="2" lineHeight="none" fontWeight="black">
+        <Text
+          as="h1"
+          fontSize="6xl"
+          mb={2}
+          lineHeight="none"
+          fontWeight="black"
+        >
           {data.site.siteMetadata.author}
         </Text>
         <Text
           id="typed"
           display="inline-flex"
-          color={fontColor}
+          fontWeight="bold"
           whiteSpace="pre"
+          pl={1}
         ></Text>
       </Box>
     </Center>

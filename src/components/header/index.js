@@ -12,6 +12,7 @@ import {
   Text,
   HStack,
   IconButton,
+  Center,
 } from "@chakra-ui/react"
 import { Link as GatsbyLink } from "gatsby"
 
@@ -42,12 +43,12 @@ function Menu() {
         </IconContext.Provider>
       </Button>
       <Slide direction="top" in={isOpen} style={{ zIndex: 10 }}>
-        <Box height="100vh" color="white" bg="gray.900" shadow="md">
+        <Box color="white" bg="gray.900" shadow="md">
           <Flex p="4">
             <Spacer />
             <CloseButton onClick={onToggle} size="lg" />
           </Flex>
-          <VStack p="8" spacing={6} alignItems="flex-start">
+          <VStack p={8} spacing={6} alignItems="flex-start">
             <Link as={GatsbyLink} to="/" onClick={onToggle}>
               <Text fontSize="3xl" fontWeight="black">
                 Home
@@ -69,11 +70,11 @@ function Menu() {
               </Text>
             </Link>
           </VStack>
-          <Box mt="48" pl="8">
+          <Center mt={60} p={6}>
             <Text fontWeight="semibold">Daryll Capistrano</Text>
             <Text color="GrayText">Web Developer</Text>
-          </Box>
-          <HStack width="100%" mt="4" justifyContent="space-evenly">
+          </Center>
+          <HStack width="100%" p={6} justifyContent="space-between">
             <Link href="mailto:dcapistrano.dev@gmail.com" isExternal>
               <IconButton
                 aria-label="send me an email"
